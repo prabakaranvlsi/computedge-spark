@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Eye, Landmark, Lightbulb, Cpu, Bot, Layers, Server, CircuitBoard, Microchip } from "lucide-react";
 
-const stats = [
-  { value: "50+", label: "Engineers & Researchers" },
-  { value: "12", label: "Patents Filed" },
-  { value: "3", label: "Chip Tapeouts" },
-  { value: "6", label: "Core IP Blocks" },
-];
 
 const focusAreas = [
   { icon: Cpu, label: "Edge AI Hardware" },
