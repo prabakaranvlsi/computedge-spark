@@ -1,24 +1,114 @@
 import { motion } from "framer-motion";
-import { Cpu, Bot, Microchip } from "lucide-react";
+import { Cpu, Microchip, Bot, Layers, ChevronRight } from "lucide-react";
 
 const products = [
   {
     icon: Cpu,
-    title: "Edge AI Devices",
-    description: "Ultra-low-power inference accelerators designed for real-time AI workloads at the edge. From industrial sensors to autonomous drones.",
-    specs: ["< 5W TDP", "INT8/FP16 support", "On-device learning"],
-  },
-  {
-    icon: Bot,
-    title: "Robotics Systems",
-    description: "End-to-end autonomous robotics platforms with integrated perception, planning, and actuation — built for manufacturing and logistics.",
-    specs: ["6-DOF manipulation", "LiDAR + vision fusion", "ROS 2 native"],
+    title: "Edge AI SoC Platform",
+    subtitle: "RISC-V Based System on Chip",
+    description:
+      "A custom RISC-V based System on Chip optimized for edge AI workloads and embedded systems. Designed for power-constrained deployment environments requiring deterministic, real-time neural network inference with minimal latency overhead.",
+    features: [
+      "Multi-core RISC-V processor with custom AI extensions",
+      "Integrated neural network accelerator subsystem",
+      "Hardware-level security with secure boot and encrypted memory",
+      "On-chip SRAM with configurable memory hierarchy",
+      "Low-power design with dynamic voltage and frequency scaling",
+      "Support for INT8, FP16 and mixed-precision inference",
+    ],
+    applications: [
+      "Industrial automation controllers",
+      "Smart IoT gateway devices",
+      "Autonomous sensor nodes",
+      "Medical edge devices",
+    ],
+    benefits: [
+      "Sub-5W total platform power for always-on AI inference",
+      "Fully programmable RISC-V cores for flexible workload mapping",
+      "Silicon-proven IP blocks reduce time-to-tapeout",
+      "End-to-end toolchain from model compilation to deployment",
+    ],
   },
   {
     icon: Microchip,
-    title: "Custom AI Chips",
-    description: "Application-specific silicon for neural network inference, optimized for your exact model architecture and latency requirements.",
-    specs: ["7nm process", "Up to 256 TOPS", "Custom ISA"],
+    title: "AI Acceleration Engine",
+    subtitle: "Custom ML Accelerator Architecture",
+    description:
+      "A purpose-built machine learning accelerator architecture engineered for high-throughput neural network inference at the edge. Optimized for convolutional, transformer, and recurrent architectures with minimal silicon area and power budget.",
+    features: [
+      "Systolic array-based compute fabric with configurable dataflow",
+      "Support for sparse and dense tensor operations",
+      "Dedicated activation, pooling, and normalization units",
+      "Multi-model concurrent execution support",
+      "Hardware-optimized memory access patterns for bandwidth efficiency",
+      "Compiler-driven operator fusion and scheduling",
+    ],
+    applications: [
+      "Computer vision inference pipelines",
+      "Natural language processing at the edge",
+      "Predictive maintenance systems",
+      "Real-time anomaly detection",
+    ],
+    benefits: [
+      "Up to 256 TOPS peak performance within power envelope",
+      "Architecture-aware model optimization for maximum utilization",
+      "Reduced external memory bandwidth requirements",
+      "Seamless integration with RISC-V host processors",
+    ],
+  },
+  {
+    icon: Bot,
+    title: "Robotics Controller Platform",
+    subtitle: "Autonomous Systems Control Unit",
+    description:
+      "An integrated robotics control platform purpose-built for autonomous systems, drones, and industrial robotic applications. Combines real-time motor control, sensor fusion, and AI-based perception in a single cohesive hardware platform.",
+    features: [
+      "Real-time motor control with sub-microsecond loop latency",
+      "Multi-sensor fusion engine (LiDAR, IMU, camera, ToF)",
+      "Integrated AI co-processor for perception and planning",
+      "ROS 2 native hardware abstraction layer",
+      "Redundant safety controllers with watchdog supervision",
+      "CAN-FD, EtherCAT, and SPI sensor interfaces",
+    ],
+    applications: [
+      "Autonomous mobile robots (AMRs)",
+      "Industrial robotic arms and manipulators",
+      "Drone flight controllers with AI navigation",
+      "Warehouse and logistics automation",
+    ],
+    benefits: [
+      "Unified compute for control and AI eliminates multi-board architectures",
+      "Deterministic real-time performance for safety-critical applications",
+      "Reduced BOM cost through hardware consolidation",
+      "Field-updatable AI models via secure OTA pipeline",
+    ],
+  },
+  {
+    icon: Layers,
+    title: "FPGA AI Acceleration Platform",
+    subtitle: "Reconfigurable AI Prototyping System",
+    description:
+      "An FPGA-based platform for rapid prototyping, validation, and deployment of AI accelerator architectures and edge AI applications. Enables hardware-software co-design workflows and pre-silicon verification of custom AI IP blocks.",
+    features: [
+      "High-density FPGA fabric with dedicated DSP and memory blocks",
+      "Pre-built AI accelerator soft IP library",
+      "Hardware-in-the-loop simulation support",
+      "High-speed interfaces (PCIe Gen4, DDR4/5, Ethernet)",
+      "Integrated logic analyzer and performance profiling tools",
+      "Compatible with industry-standard RTL and HLS toolchains",
+    ],
+    applications: [
+      "AI accelerator architecture exploration",
+      "Pre-silicon SoC emulation and verification",
+      "Edge AI application prototyping",
+      "Academic and research AI hardware development",
+    ],
+    benefits: [
+      "Accelerate ASIC design cycles with FPGA-first validation",
+      "Reconfigurable fabric enables rapid design iteration",
+      "Production-representative performance benchmarking",
+      "Seamless transition path from FPGA prototype to custom silicon",
+    ],
   },
 ];
 
@@ -27,7 +117,7 @@ const container = {
   show: { transition: { staggerChildren: 0.15 } },
 };
 
-const item = {
+const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
@@ -39,12 +129,16 @@ const ProductsSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-16"
+        className="mb-16 max-w-3xl"
       >
         <p className="font-display text-sm text-primary tracking-widest uppercase mb-2">Products</p>
-        <h2 className="text-3xl sm:text-4xl font-display font-bold">
-          Hardware That <span className="text-gradient">Thinks</span>
+        <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+          Hardware Platforms for{" "}
+          <span className="text-gradient">Edge Intelligence</span>
         </h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Purpose-built silicon and hardware platforms engineered for AI inference, autonomous systems, and semiconductor IP development — from architecture exploration to production deployment.
+        </p>
       </motion.div>
 
       <motion.div
@@ -52,23 +146,72 @@ const ProductsSection = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-6"
+        className="space-y-8"
       >
-        {products.map((product) => (
+        {products.map((product, idx) => (
           <motion.div
             key={product.title}
-            variants={item}
-            className="group rounded-lg border border-border bg-card p-8 hover:glow-border transition-all duration-300"
+            variants={fadeUp}
+            className="rounded-lg border border-border bg-card overflow-hidden hover:glow-border transition-all duration-300"
           >
-            <product.icon className="w-10 h-10 text-primary mb-6" strokeWidth={1.5} />
-            <h3 className="font-display text-xl font-semibold mb-3">{product.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">{product.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {product.specs.map((spec) => (
-                <span key={spec} className="text-xs font-display px-3 py-1 rounded-full border border-border text-muted-foreground">
-                  {spec}
-                </span>
-              ))}
+            {/* Product Header */}
+            <div className="p-8 pb-0">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 rounded-lg border border-border bg-secondary/50">
+                  <product.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-bold">{product.title}</h3>
+                  <p className="font-display text-xs text-primary tracking-wider uppercase mt-1">
+                    {product.subtitle}
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">
+                {product.description}
+              </p>
+            </div>
+
+            {/* Product Details Grid */}
+            <div className="grid md:grid-cols-3 gap-px bg-border">
+              {/* Key Features */}
+              <div className="bg-card p-6">
+                <h4 className="font-display text-xs text-primary tracking-widest uppercase mb-4">Key Features</h4>
+                <ul className="space-y-2">
+                  {product.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
+                      <ChevronRight className="w-3 h-3 text-primary mt-0.5 shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Target Applications */}
+              <div className="bg-card p-6">
+                <h4 className="font-display text-xs text-primary tracking-widest uppercase mb-4">Target Applications</h4>
+                <ul className="space-y-2">
+                  {product.applications.map((a) => (
+                    <li key={a} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
+                      <ChevronRight className="w-3 h-3 text-primary mt-0.5 shrink-0" />
+                      {a}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Benefits */}
+              <div className="bg-card p-6">
+                <h4 className="font-display text-xs text-primary tracking-widest uppercase mb-4">Benefits</h4>
+                <ul className="space-y-2">
+                  {product.benefits.map((b) => (
+                    <li key={b} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
+                      <ChevronRight className="w-3 h-3 text-primary mt-0.5 shrink-0" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         ))}
