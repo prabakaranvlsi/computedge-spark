@@ -26,38 +26,44 @@ const InfrastructureIPPage = () => (
       description="Production-grade infrastructure IP blocks designed for integration into RISC-V based SoC platforms and custom silicon solutions."
     />
 
-    <div className="container py-28">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.97 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden image-glow mb-20"
-      >
-        <img src={infraImage} alt="Semiconductor architecture and circuit design" className="w-full h-72 md:h-96 object-cover" />
-      </motion.div>
+    <div className="py-28 md:py-36 section-separator">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="rounded-2xl overflow-hidden image-glow"
+        >
+          <img src={infraImage} alt="Semiconductor architecture and circuit design" className="w-full h-72 md:h-96 object-cover" />
+        </motion.div>
+      </div>
+    </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {ipBlocks.map((block, i) => (
-          <motion.div
-            key={block.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
-            className="rounded-2xl border border-border bg-card p-7 card-hover-glow"
-          >
-            <h3 className="text-lg font-semibold mb-3">{block.name}</h3>
-            <p className="text-body-sm text-muted-foreground leading-relaxed mb-5">{block.description}</p>
-            <ul className="space-y-2.5">
-              {block.features.map((f) => (
-                <li key={f} className="flex items-start gap-2.5 text-body-sm text-muted-foreground">
-                  <ChevronRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" />
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
+    <div className="py-28 md:py-36 section-alt section-separator">
+      <div className="container">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {ipBlocks.map((block, i) => (
+            <motion.div
+              key={block.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="rounded-2xl border border-border bg-card p-7 card-hover-glow"
+            >
+              <h3 className="text-lg font-semibold mb-3">{block.name}</h3>
+              <p className="text-body-sm text-muted-foreground leading-relaxed mb-5">{block.description}</p>
+              <ul className="space-y-2.5">
+                {block.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2.5 text-body-sm text-muted-foreground">
+                    <ChevronRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
     <Footer />
