@@ -13,7 +13,7 @@ const techAreas = [
 ];
 
 const HomeTechSection = () => (
-  <section className="py-24">
+  <section className="py-24 bg-muted/30">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -21,8 +21,8 @@ const HomeTechSection = () => (
         viewport={{ once: true }}
         className="mb-12"
       >
-        <p className="font-display text-sm text-primary tracking-widest uppercase mb-2">Technology Focus</p>
-        <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-2">Technology Focus</p>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           Core Technology <span className="text-gradient">Domains</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl">
@@ -38,16 +38,16 @@ const HomeTechSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="p-6 rounded-lg border border-border bg-card hover:border-primary/30 transition-all"
+            className="p-6 rounded-xl border border-border bg-background hover:border-primary/30 hover:shadow-md transition-all"
           >
             <area.icon className="w-7 h-7 text-primary mb-4" strokeWidth={1.5} />
-            <h3 className="font-display text-sm font-semibold mb-2">{area.title}</h3>
+            <h3 className="text-sm font-semibold mb-2">{area.title}</h3>
             <p className="text-xs text-muted-foreground leading-relaxed">{area.description}</p>
           </motion.div>
         ))}
       </div>
 
-      <Link to="/technology" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-display">
+      <Link to="/technology" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium">
         Explore our technology <ArrowRight size={14} />
       </Link>
     </div>
