@@ -42,8 +42,8 @@ const HomeProductsPreview = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
           >
-            <Link
-              to={`/products#${product.slug}`}
+            <a
+              href={`/products#${product.slug}`}
               className="group block rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
             >
               <div className="relative h-48 overflow-hidden">
