@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Cpu, Microchip, Bot, Layers, Zap, CircuitBoard, BatteryCharging } from "lucide-react";
+import { Cpu, Microchip, Bot, Layers, CircuitBoard, BatteryCharging } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
 const techAreas = [
