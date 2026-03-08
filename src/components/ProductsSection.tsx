@@ -31,6 +31,7 @@ const products = [
   {
     icon: Bot,
     image: productRobotics,
+    slug: "robotics-controller-platform",
     title: "Robotics Controller Platform",
     subtitle: "Autonomous Systems Control Unit",
     description: "An integrated robotics control platform purpose-built for autonomous systems, drones, and industrial robotic applications.",
