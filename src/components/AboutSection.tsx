@@ -14,7 +14,7 @@ const pillars = [
   {
     icon: Target,
     title: "Our Mission",
-    text: "To engineer the most power-efficient, high-performance AI silicon for edge deployment — enabling intelligent decision-making at the point of data generation, without reliance on cloud infrastructure. We are committed to closing the gap between AI capability and hardware constraint across robotics, drones, industrial automation, and smart IoT systems.",
+    text: "To engineer power-efficient, high-performance AI silicon for intelligent edge devices — enabling real-time decision-making directly where data is generated across robotics, drones, industrial automation, and smart IoT systems.",
   },
   {
     icon: Eye,
