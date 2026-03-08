@@ -6,48 +6,48 @@
 
 @layer base {
   :root {
-    --background: 222 20% 10%;
-    --foreground: 210 20% 95%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    --card: 222 18% 14%;
-    --card-foreground: 210 20% 95%;
+    --card: 210 20% 98%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222 18% 14%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 210 100% 60%;
+    --primary: 213 94% 48%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 15% 20%;
-    --secondary-foreground: 210 15% 80%;
+    --secondary: 210 18% 95%;
+    --secondary-foreground: 222 30% 40%;
 
-    --muted: 222 15% 17%;
-    --muted-foreground: 215 12% 62%;
+    --muted: 210 16% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 260 70% 65%;
+    --accent: 255 60% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 15% 22%;
-    --input: 222 15% 22%;
-    --ring: 210 100% 60%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 213 94% 48%;
 
     --radius: 0.75rem;
 
-    --glow-primary: 0 0 40px hsl(210 100% 60% / 0.12);
-    --glow-strong: 0 0 80px hsl(210 100% 60% / 0.2);
-    --glow-accent: 0 0 60px hsl(260 70% 65% / 0.15);
+    --glow-primary: 0 0 40px hsl(213 94% 48% / 0.08);
+    --glow-strong: 0 0 80px hsl(213 94% 48% / 0.12);
+    --glow-accent: 0 0 60px hsl(255 60% 58% / 0.08);
 
-    --sidebar-background: 222 18% 12%;
-    --sidebar-foreground: 210 15% 80%;
-    --sidebar-primary: 210 100% 60%;
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 215 16% 47%;
+    --sidebar-primary: 213 94% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 15% 20%;
-    --sidebar-accent-foreground: 210 15% 80%;
-    --sidebar-border: 222 15% 22%;
-    --sidebar-ring: 210 100% 60%;
+    --sidebar-accent: 210 18% 95%;
+    --sidebar-accent-foreground: 222 30% 40%;
+    --sidebar-border: 214 20% 90%;
+    --sidebar-ring: 213 94% 48%;
   }
 }
 
@@ -68,80 +68,80 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(210 100% 65%), hsl(260 80% 65%), hsl(210 100% 55%));
+    background-image: linear-gradient(135deg, hsl(213 94% 48%), hsl(255 60% 58%), hsl(213 94% 40%));
   }
 
   .text-gradient-hero {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(210 100% 70%), hsl(260 80% 70%), hsl(190 100% 60%));
+    background-image: linear-gradient(135deg, hsl(213 94% 48%), hsl(255 60% 58%), hsl(190 90% 45%));
   }
 
   .glow-border {
     box-shadow: var(--glow-primary);
-    @apply border border-primary/25;
+    @apply border border-primary/20;
   }
 
   .glow-border-accent {
     box-shadow: var(--glow-accent);
-    @apply border border-accent/25;
+    @apply border border-accent/20;
   }
 
   .glass {
-    @apply bg-card/60 backdrop-blur-xl border border-border/60;
+    @apply bg-white/70 backdrop-blur-xl border border-border/60;
   }
 
   .glass-strong {
-    @apply bg-card/80 backdrop-blur-2xl border border-border/80;
+    @apply bg-white/90 backdrop-blur-2xl border border-border/80;
   }
 
   .circuit-bg {
     background-image:
-      linear-gradient(hsl(222 15% 22% / 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(222 15% 22% / 0.5) 1px, transparent 1px);
+      linear-gradient(hsl(214 20% 90% / 0.6) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(214 20% 90% / 0.6) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
   .circuit-bg-fine {
     background-image:
-      linear-gradient(hsl(222 15% 22% / 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(222 15% 22% / 0.4) 1px, transparent 1px);
+      linear-gradient(hsl(214 20% 90% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(214 20% 90% / 0.5) 1px, transparent 1px);
     background-size: 30px 30px;
   }
 
   .gradient-radial {
-    background: radial-gradient(ellipse at center, hsl(210 100% 55% / 0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, hsl(213 94% 48% / 0.04) 0%, transparent 70%);
   }
 
   .gradient-radial-accent {
-    background: radial-gradient(ellipse at 30% 50%, hsl(260 80% 60% / 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 50%, hsl(210 100% 55% / 0.06) 0%, transparent 50%);
+    background: radial-gradient(ellipse at 30% 50%, hsl(255 60% 58% / 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 50%, hsl(213 94% 48% / 0.04) 0%, transparent 50%);
   }
 
   .section-glow-top {
-    background: linear-gradient(180deg, hsl(210 100% 55% / 0.03) 0%, transparent 40%);
+    background: linear-gradient(180deg, hsl(213 94% 48% / 0.02) 0%, transparent 40%);
   }
 
   .hero-gradient {
     background: 
-      radial-gradient(ellipse at 20% 50%, hsl(210 100% 55% / 0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 30%, hsl(260 80% 60% / 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 80%, hsl(190 100% 50% / 0.05) 0%, transparent 50%);
+      radial-gradient(ellipse at 20% 50%, hsl(213 94% 48% / 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 30%, hsl(255 60% 58% / 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, hsl(190 90% 45% / 0.03) 0%, transparent 50%);
   }
 
   .card-hover-glow {
     @apply transition-all duration-500;
   }
   .card-hover-glow:hover {
-    box-shadow: 0 0 30px hsl(210 100% 55% / 0.1), 0 0 60px hsl(260 80% 60% / 0.05);
-    border-color: hsl(210 100% 55% / 0.3);
+    box-shadow: 0 4px 24px hsl(213 94% 48% / 0.08), 0 0 40px hsl(255 60% 58% / 0.04);
+    border-color: hsl(213 94% 48% / 0.25);
   }
 
   .stat-glow {
-    text-shadow: 0 0 40px hsl(210 100% 55% / 0.5);
+    text-shadow: 0 0 30px hsl(213 94% 48% / 0.25);
   }
 
   .image-glow {
-    box-shadow: 0 20px 60px -15px hsl(210 100% 55% / 0.15), 0 0 30px hsl(260 80% 60% / 0.08);
+    box-shadow: 0 20px 60px -15px hsl(213 94% 48% / 0.1), 0 0 30px hsl(255 60% 58% / 0.05);
   }
 }
 
@@ -150,12 +150,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(222 20% 10%);
+  background: hsl(210 20% 98%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(222 15% 26%);
+  background: hsl(214 20% 82%);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(222 15% 34%);
+  background: hsl(214 20% 70%);
 }

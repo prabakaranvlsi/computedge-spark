@@ -86,7 +86,7 @@ const ProductsSection = () => (
             <div className="grid md:grid-cols-[300px_1fr]">
               <div className="h-48 md:h-full relative overflow-hidden">
                 <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/50 hidden md:block" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/40 hidden md:block" />
               </div>
               <div>
                 <div className="p-8 pb-0">

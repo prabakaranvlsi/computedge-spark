@@ -15,8 +15,8 @@ const HeroSection = () => (
     {/* Background layers */}
     <div className="absolute inset-0">
       <img src={heroImage} alt="AI computing chip with glowing circuits" className="w-full h-full object-cover scale-105" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/50" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/70" />
       <div className="absolute inset-0 hero-gradient" />
     </div>
 
