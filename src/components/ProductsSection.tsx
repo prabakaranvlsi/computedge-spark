@@ -9,6 +9,7 @@ const products = [
   {
     icon: Cpu,
     image: productSoc,
+    slug: "edge-ai-soc-platform",
     title: "Edge AI SoC Platform",
     subtitle: "RISC-V Based System on Chip",
     description: "A custom RISC-V based System on Chip optimized for edge AI workloads and embedded systems.",
@@ -19,6 +20,7 @@ const products = [
   {
     icon: Microchip,
     image: productAi,
+    slug: "ai-acceleration-engine",
     title: "AI Acceleration Engine",
     subtitle: "Custom ML Accelerator Architecture",
     description: "A purpose-built machine learning accelerator architecture engineered for high-throughput neural network inference at the edge.",
@@ -29,6 +31,7 @@ const products = [
   {
     icon: Bot,
     image: productRobotics,
+    slug: "robotics-controller-platform",
     title: "Robotics Controller Platform",
     subtitle: "Autonomous Systems Control Unit",
     description: "An integrated robotics control platform purpose-built for autonomous systems, drones, and industrial robotic applications.",
@@ -39,6 +42,7 @@ const products = [
   {
     icon: Layers,
     image: productFpga,
+    slug: "fpga-ai-acceleration-platform",
     title: "FPGA AI Acceleration Platform",
     subtitle: "Reconfigurable AI Prototyping System",
     description: "An FPGA-based platform for rapid prototyping, validation, and deployment of AI accelerator architectures.",
@@ -75,8 +79,9 @@ const ProductsSection = () => (
         {products.map((product) => (
           <motion.div
             key={product.title}
+            id={product.slug}
             variants={fadeUp}
-            className="rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
+            className="scroll-mt-24 rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
           >
             <div className="grid md:grid-cols-[300px_1fr]">
               <div className="h-48 md:h-full relative overflow-hidden">
