@@ -9,6 +9,7 @@ const products = [
   {
     icon: Cpu,
     image: productSoc,
+    slug: "edge-ai-soc-platform",
     title: "Edge AI SoC Platform",
     subtitle: "RISC-V Based System on Chip",
     description: "A custom RISC-V based System on Chip optimized for edge AI workloads and embedded systems.",
