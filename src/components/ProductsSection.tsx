@@ -79,8 +79,9 @@ const ProductsSection = () => (
         {products.map((product) => (
           <motion.div
             key={product.title}
+            id={product.slug}
             variants={fadeUp}
-            className="rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
+            className="scroll-mt-24 rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
           >
             <div className="grid md:grid-cols-[300px_1fr]">
               <div className="h-48 md:h-full relative overflow-hidden">

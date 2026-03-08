@@ -41,25 +41,29 @@ const HomeProductsPreview = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="group rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
           >
-            <div className="relative h-48 overflow-hidden">
-              <img
-                src={product.image}
-                alt={product.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <div className="w-9 h-9 rounded-lg bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center">
-                  <product.icon className="w-4.5 h-4.5 text-primary" strokeWidth={1.5} />
+            <Link
+              to={`/products#${product.slug}`}
+              className="group block rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="w-9 h-9 rounded-lg bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center">
+                    <product.icon className="w-4.5 h-4.5 text-primary" strokeWidth={1.5} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
-            </div>
+              <div className="p-6">
+                <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>
