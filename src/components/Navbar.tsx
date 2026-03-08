@@ -17,7 +17,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-2xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-2xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="text-xl font-black tracking-tight">
           <span className="text-gradient">Comput</span>
@@ -57,7 +57,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-border bg-background/98 backdrop-blur-2xl"
+            className="lg:hidden border-t border-border bg-background/98 backdrop-blur-xl"
           >
             <div className="container py-4 flex flex-col gap-4">
               {[...navLinks, { label: "Contact", href: "/contact" }].map((link) => (

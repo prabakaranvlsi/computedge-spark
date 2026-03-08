@@ -52,7 +52,7 @@ const HomeProductsPreview = () => (
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                 <div className="absolute bottom-4 left-4">
                   <div className="w-9 h-9 rounded-lg bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center">
                     <product.icon className="w-4.5 h-4.5 text-primary" strokeWidth={1.5} />

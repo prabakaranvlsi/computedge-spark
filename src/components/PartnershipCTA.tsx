@@ -15,8 +15,8 @@ const PartnershipCTA = () => (
   <section className="relative py-32 overflow-hidden">
     <div className="absolute inset-0">
       <img src={ctaBg} alt="Futuristic AI hardware technology" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/65" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
     </div>
     <div className="absolute inset-0 circuit-bg opacity-20" />
 
