@@ -20,6 +20,7 @@ const products = [
   {
     icon: Microchip,
     image: productAi,
+    slug: "ai-acceleration-engine",
     title: "AI Acceleration Engine",
     subtitle: "Custom ML Accelerator Architecture",
     description: "A purpose-built machine learning accelerator architecture engineered for high-throughput neural network inference at the edge.",
