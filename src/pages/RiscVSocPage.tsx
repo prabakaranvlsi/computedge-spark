@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageLayout, PageHeader } from "@/components/PageLayout";
+import riscvImage from "@/assets/riscv-soc.jpg";
 
 const archFeatures = [
   { title: "32-bit RISC-V CPU", description: "Custom RV32IMAC core with AI instruction extensions for embedded workloads." },
@@ -25,6 +26,15 @@ const RiscVSocPage = () => (
     />
 
     <div className="container py-24">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.97 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+      >
+        <img src={riscvImage} alt="RISC-V processor architecture visualization" className="w-full h-64 md:h-80 object-cover" />
+      </motion.div>
+
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
         <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-6">Architecture Features</p>
         <div className="grid md:grid-cols-2 gap-5">

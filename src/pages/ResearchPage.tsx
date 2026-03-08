@@ -3,6 +3,7 @@ import { Beaker, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageLayout, PageHeader } from "@/components/PageLayout";
+import researchImage from "@/assets/research.jpg";
 
 const researchAreas = [
   { title: "AI Hardware Acceleration Architectures", description: "Exploring novel compute array topologies, dataflow architectures, and memory hierarchies optimized for emerging neural network models." },
@@ -22,6 +23,15 @@ const ResearchPage = () => (
     />
 
     <div className="container py-24">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.97 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+      >
+        <img src={researchImage} alt="AI research and neural network visualization" className="w-full h-64 md:h-80 object-cover" />
+      </motion.div>
+
       <div className="space-y-6 mb-20">
         {researchAreas.map((area, i) => (
           <motion.div

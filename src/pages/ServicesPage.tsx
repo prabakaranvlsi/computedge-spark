@@ -3,6 +3,7 @@ import { Settings, Cpu, Microchip, Layers, Bot, CircuitBoard, Server } from "luc
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageLayout, PageHeader } from "@/components/PageLayout";
+import servicesImage from "@/assets/services.jpg";
 
 const services = [
   { icon: Settings, title: "Custom SoC Design", description: "Full-cycle System-on-Chip design from architecture specification and RTL development through synthesis, physical implementation, and tapeout.", industries: ["Semiconductor", "Edge AI", "Industrial Automation", "Consumer Electronics"] },
@@ -24,6 +25,15 @@ const ServicesPage = () => (
     />
 
     <div className="container py-24">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.97 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+      >
+        <img src={servicesImage} alt="Engineers designing semiconductor circuits" className="w-full h-64 md:h-80 object-cover" />
+      </motion.div>
+
       <div className="space-y-6">
         {services.map((svc, i) => (
           <motion.div
