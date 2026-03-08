@@ -6,7 +6,7 @@ import { PageLayout } from "@/components/PageLayout";
 const ProductsPage = () => (
   <PageLayout>
     <Navbar />
-    <div className="pt-16">
+    <div className="pt-16 section-separator">
       <ProductsSection />
     </div>
     <Footer />

@@ -24,35 +24,41 @@ const TechnologyPage = () => (
       description="ComputEdge Technologies operates at the intersection of semiconductor engineering, AI systems research, and autonomous robotics."
     />
 
-    <div className="container py-28">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.97 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden image-glow mb-20"
-      >
-        <img src={techImage} alt="Advanced semiconductor and AI technology" className="w-full h-72 md:h-96 object-cover" />
-      </motion.div>
+    <div className="py-28 md:py-36 section-separator">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="rounded-2xl overflow-hidden image-glow"
+        >
+          <img src={techImage} alt="Advanced semiconductor and AI technology" className="w-full h-72 md:h-96 object-cover" />
+        </motion.div>
+      </div>
+    </div>
 
-      <div className="space-y-6">
-        {techAreas.map((area, i) => (
-          <motion.div
-            key={area.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
-            className="flex gap-7 p-9 rounded-2xl border border-border bg-card card-hover-glow"
-          >
-            <div className="w-14 h-14 rounded-xl bg-primary/8 border border-primary/15 flex items-center justify-center shrink-0">
-              <area.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-3">{area.title}</h3>
-              <p className="text-body text-muted-foreground leading-relaxed">{area.description}</p>
-            </div>
-          </motion.div>
-        ))}
+    <div className="py-28 md:py-36 section-alt section-separator">
+      <div className="container">
+        <div className="space-y-6">
+          {techAreas.map((area, i) => (
+            <motion.div
+              key={area.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="flex gap-7 p-9 rounded-2xl border border-border bg-card card-hover-glow"
+            >
+              <div className="w-14 h-14 rounded-xl bg-primary/8 border border-primary/15 flex items-center justify-center shrink-0">
+                <area.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-3">{area.title}</h3>
+                <p className="text-body text-muted-foreground leading-relaxed">{area.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
     <Footer />
