@@ -21,7 +21,7 @@ const ServicesPage = () => (
     <PageHeader
       label="Services"
       title={<>End-to-End Silicon <span className="text-gradient">Engineering</span></>}
-      description="ComputEdge Technologies offers comprehensive semiconductor engineering services — from SoC architecture and custom accelerator design to FPGA prototyping, robotics integration, and IP development."
+      description="Comprehensive semiconductor engineering services — from SoC architecture and custom accelerator design to FPGA prototyping, robotics integration, and IP development."
     />
 
     <div className="container py-24">
@@ -29,12 +29,12 @@ const ServicesPage = () => (
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+        className="rounded-2xl overflow-hidden image-glow mb-16"
       >
         <img src={servicesImage} alt="Engineers designing semiconductor circuits" className="w-full h-64 md:h-80 object-cover" />
       </motion.div>
 
-      <div className="space-y-6">
+      <div className="space-y-5">
         {services.map((svc, i) => (
           <motion.div
             key={svc.title}
@@ -42,16 +42,18 @@ const ServicesPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="p-8 rounded-xl border border-border bg-card hover:shadow-md transition-all duration-300"
+            className="p-8 rounded-xl border border-border bg-card/50 card-hover-glow"
           >
             <div className="flex gap-6">
-              <svc.icon className="w-8 h-8 text-primary shrink-0 mt-1" strokeWidth={1.5} />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                <svc.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
+              </div>
               <div>
                 <h3 className="text-base font-semibold mb-2">{svc.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{svc.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {svc.industries.map((ind) => (
-                    <span key={ind} className="text-xs font-medium px-3 py-1 rounded-full border border-border bg-muted text-muted-foreground">
+                    <span key={ind} className="text-xs font-medium px-3 py-1 rounded-lg border border-border bg-muted/50 text-muted-foreground">
                       {ind}
                     </span>
                   ))}

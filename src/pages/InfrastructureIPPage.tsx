@@ -31,12 +31,12 @@ const InfrastructureIPPage = () => (
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+        className="rounded-2xl overflow-hidden image-glow mb-16"
       >
         <img src={infraImage} alt="Semiconductor architecture and circuit design" className="w-full h-64 md:h-80 object-cover" />
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {ipBlocks.map((block, i) => (
           <motion.div
             key={block.name}
@@ -44,7 +44,7 @@ const InfrastructureIPPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="rounded-xl border border-border bg-card p-6 hover:border-primary/30 hover:shadow-md transition-all"
+            className="rounded-xl border border-border bg-card/50 p-6 card-hover-glow"
           >
             <h3 className="text-base font-semibold mb-2">{block.name}</h3>
             <p className="text-xs text-muted-foreground leading-relaxed mb-4">{block.description}</p>

@@ -30,23 +30,24 @@ const footerLinks = [
 ];
 
 const Footer = () => (
-  <footer className="border-t border-border bg-muted/50 py-16">
-    <div className="container">
+  <footer className="relative border-t border-border bg-card/30">
+    <div className="absolute inset-0 circuit-bg-fine opacity-5" />
+    <div className="container relative py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div>
-          <Link to="/" className="text-lg font-extrabold tracking-tight">
+          <Link to="/" className="text-lg font-black tracking-tight">
             <span className="text-gradient">Comput</span>
             <span className="text-foreground">Edge</span>
           </Link>
-          <p className="text-xs text-muted-foreground mt-3 leading-relaxed max-w-[200px]">
-            Next-generation edge AI hardware, RISC-V processors, and custom silicon.
+          <p className="text-xs text-muted-foreground mt-4 leading-relaxed max-w-[220px]">
+            Next-generation edge AI hardware, RISC-V processors, and custom silicon for intelligent systems.
           </p>
         </div>
 
         {footerLinks.map((group) => (
           <div key={group.title}>
-            <p className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">{group.title}</p>
-            <ul className="space-y-2">
+            <p className="text-xs font-semibold tracking-widest uppercase text-foreground/70 mb-4">{group.title}</p>
+            <ul className="space-y-2.5">
               {group.links.map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="text-xs text-muted-foreground hover:text-primary transition-colors">
@@ -60,8 +61,8 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-xs text-muted-foreground">© 2026 ComputEdge Technologies. All rights reserved.</p>
-        <div className="flex gap-6 text-xs text-muted-foreground">
+        <p className="text-xs text-muted-foreground/60">© 2026 ComputEdge Technologies. All rights reserved.</p>
+        <div className="flex gap-6 text-xs text-muted-foreground/60">
           <a href="#" className="hover:text-primary transition-colors">Privacy</a>
           <a href="#" className="hover:text-primary transition-colors">Terms</a>
           <a href="#" className="hover:text-primary transition-colors">Careers</a>

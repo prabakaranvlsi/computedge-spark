@@ -13,19 +13,22 @@ const techAreas = [
 ];
 
 const HomeTechSection = () => (
-  <section className="py-24 bg-muted/30">
-    <div className="container">
-      <div className="grid lg:grid-cols-2 gap-16 items-center mb-12">
+  <section className="relative py-28 overflow-hidden">
+    <div className="absolute inset-0 circuit-bg opacity-20" />
+    <div className="absolute inset-0 gradient-radial" />
+
+    <div className="container relative">
+      <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-2">Technology Focus</p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-3">Technology Focus</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
             Core Technology <span className="text-gradient">Domains</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl">
+          <p className="text-muted-foreground leading-relaxed">
             We operate at the intersection of semiconductor engineering, AI systems research, and robotics — building hardware platforms that bring intelligence to the edge.
           </p>
         </motion.div>
@@ -33,13 +36,13 @@ const HomeTechSection = () => (
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden shadow-xl"
+          className="rounded-2xl overflow-hidden image-glow"
         >
           <img src={techImage} alt="Advanced AI semiconductor technology" className="w-full h-64 lg:h-80 object-cover" />
         </motion.div>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
         {techAreas.map((area, i) => (
           <motion.div
             key={area.title}
@@ -47,17 +50,19 @@ const HomeTechSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="p-6 rounded-xl border border-border bg-background hover:border-primary/30 hover:shadow-md transition-all"
+            className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm card-hover-glow"
           >
-            <area.icon className="w-7 h-7 text-primary mb-4" strokeWidth={1.5} />
+            <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
+              <area.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+            </div>
             <h3 className="text-sm font-semibold mb-2">{area.title}</h3>
             <p className="text-xs text-muted-foreground leading-relaxed">{area.description}</p>
           </motion.div>
         ))}
       </div>
 
-      <Link to="/technology" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium">
-        Explore our technology <ArrowRight size={14} />
+      <Link to="/technology" className="group inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 font-medium transition-colors">
+        Explore our technology <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
       </Link>
     </div>
   </section>

@@ -31,12 +31,11 @@ const AboutPage = () => (
     />
 
     <div className="container py-24">
-      {/* Hero image */}
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden shadow-xl mb-20"
+        className="rounded-2xl overflow-hidden image-glow mb-20"
       >
         <img src={aboutImage} alt="Semiconductor innovation and AI chip technology" className="w-full h-64 md:h-80 object-cover" />
       </motion.div>
@@ -45,8 +44,10 @@ const AboutPage = () => (
         <p className="text-xs font-semibold text-muted-foreground tracking-widest uppercase mb-6">Core Focus Areas</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {focusAreas.map((area) => (
-            <div key={area.label} className="flex flex-col items-center gap-3 p-5 rounded-xl border border-border bg-card text-center hover:border-primary/30 hover:shadow-sm transition-all">
-              <area.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
+            <div key={area.label} className="flex flex-col items-center gap-3 p-5 rounded-xl border border-border bg-card/50 text-center card-hover-glow">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <area.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+              </div>
               <span className="text-xs font-medium text-foreground/80">{area.label}</span>
             </div>
           ))}
@@ -61,10 +62,12 @@ const AboutPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="rounded-xl border border-border bg-card p-8 hover:shadow-md transition-all duration-300"
+            className="rounded-xl border border-border bg-card/50 p-8 card-hover-glow"
           >
             <div className="flex items-center gap-3 mb-4">
-              <pillar.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <pillar.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+              </div>
               <h3 className="text-lg font-semibold">{pillar.title}</h3>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">{pillar.text}</p>
