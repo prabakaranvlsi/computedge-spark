@@ -28,7 +28,7 @@ const ContactSection = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/8 border border-primary/15 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
-                contact@computedge.tech
+                info@computedge.in
               </div>
               <div className="flex items-start gap-4 text-body text-muted-foreground">
                 <div className="w-12 h-12 rounded-xl bg-primary/8 border border-primary/15 flex items-center justify-center shrink-0 mt-1">
