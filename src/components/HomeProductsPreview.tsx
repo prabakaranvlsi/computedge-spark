@@ -7,10 +7,10 @@ import productRobotics from "@/assets/product-robotics.jpg";
 import productFpga from "@/assets/product-fpga.jpg";
 
 const products = [
-  { icon: Cpu, image: productSoc, title: "Edge AI SoC Platform", description: "RISC-V based System-on-Chip optimized for embedded AI workloads and intelligent edge devices." },
-  { icon: Microchip, image: productAi, title: "AI Acceleration Engine", description: "Custom ML accelerator architecture for high-throughput neural network inference on edge hardware." },
-  { icon: Bot, image: productRobotics, title: "Robotics Controller Platform", description: "Integrated computing platform for autonomous systems, drones, and robotic applications." },
-  { icon: Layers, image: productFpga, title: "FPGA AI Acceleration Platform", description: "Reconfigurable platform for prototyping AI accelerators and edge AI solutions." },
+  { icon: Cpu, image: productSoc, title: "Edge AI SoC Platform", description: "RISC-V based System-on-Chip optimized for embedded AI workloads and intelligent edge devices.", slug: "edge-ai-soc-platform" },
+  { icon: Microchip, image: productAi, title: "AI Acceleration Engine", description: "Custom ML accelerator architecture for high-throughput neural network inference on edge hardware.", slug: "ai-acceleration-engine" },
+  { icon: Bot, image: productRobotics, title: "Robotics Controller Platform", description: "Integrated computing platform for autonomous systems, drones, and robotic applications.", slug: "robotics-controller-platform" },
+  { icon: Layers, image: productFpga, title: "FPGA AI Acceleration Platform", description: "Reconfigurable platform for prototyping AI accelerators and edge AI solutions.", slug: "fpga-ai-acceleration-platform" },
 ];
 
 const HomeProductsPreview = () => (
