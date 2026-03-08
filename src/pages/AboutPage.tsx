@@ -15,7 +15,7 @@ const focusAreas = [
 ];
 
 const pillars = [
-  { icon: Target, title: "Our Mission", text: "To engineer the most power-efficient, high-performance AI silicon for edge deployment — enabling intelligent decision-making at the point of data generation, without reliance on cloud infrastructure." },
+  { icon: Target, title: "Our Mission", text: "To engineer power-efficient, high-performance AI silicon for intelligent edge devices — enabling real-time decision-making directly where data is generated across robotics, drones, industrial automation, and smart IoT systems." },
   { icon: Eye, title: "Our Vision", text: "A world where every embedded device, autonomous machine, and industrial system runs sophisticated AI workloads locally — with deterministic latency, minimal power draw, and uncompromising security." },
   { icon: Landmark, title: "Company Story", text: "ComputEdge Technologies was founded by semiconductor veterans and AI systems architects who recognized a critical gap: the AI revolution was accelerating, but the hardware at the edge was falling behind." },
   { icon: Lightbulb, title: "Founder's Vision", text: "Our founder's conviction is rooted in a simple but powerful thesis: the future of AI is not in the data center — it's at the edge. By combining custom accelerator micro-architectures with RISC-V processor cores, ComputEdge is pioneering a new class of AI SoCs." },
