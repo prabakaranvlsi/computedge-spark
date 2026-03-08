@@ -9,14 +9,19 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1280px",
       },
     },
     extend: {
       fontFamily: {
-        display: ['"Inter"', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'body': ['1rem', { lineHeight: '1.7' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.75' }],
+        'body-sm': ['0.9375rem', { lineHeight: '1.65' }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -85,22 +90,12 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "shimmer": {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
-        "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(210 100% 55% / 0.1)" },
-          "50%": { boxShadow: "0 0 40px hsl(210 100% 55% / 0.25)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
-        "shimmer": "shimmer 3s ease-in-out infinite",
-        "glow-pulse": "glow-pulse 4s ease-in-out infinite",
       },
     },
   },

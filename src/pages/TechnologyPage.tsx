@@ -24,17 +24,17 @@ const TechnologyPage = () => (
       description="ComputEdge Technologies operates at the intersection of semiconductor engineering, AI systems research, and autonomous robotics."
     />
 
-    <div className="container py-24">
+    <div className="container py-28">
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden image-glow mb-16"
+        className="rounded-2xl overflow-hidden image-glow mb-20"
       >
-        <img src={techImage} alt="Advanced semiconductor and AI technology" className="w-full h-64 md:h-80 object-cover" />
+        <img src={techImage} alt="Advanced semiconductor and AI technology" className="w-full h-72 md:h-96 object-cover" />
       </motion.div>
 
-      <div className="space-y-5">
+      <div className="space-y-6">
         {techAreas.map((area, i) => (
           <motion.div
             key={area.title}
@@ -42,14 +42,14 @@ const TechnologyPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="flex gap-6 p-8 rounded-xl border border-border bg-card/50 card-hover-glow"
+            className="flex gap-7 p-9 rounded-2xl border border-border bg-card card-hover-glow"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-              <area.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
+            <div className="w-14 h-14 rounded-xl bg-primary/8 border border-primary/15 flex items-center justify-center shrink-0">
+              <area.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
             </div>
             <div>
-              <h3 className="text-base font-semibold mb-2">{area.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>
+              <h3 className="text-lg font-semibold mb-3">{area.title}</h3>
+              <p className="text-body text-muted-foreground leading-relaxed">{area.description}</p>
             </div>
           </motion.div>
         ))}

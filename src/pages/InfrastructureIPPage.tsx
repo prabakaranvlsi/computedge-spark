@@ -26,17 +26,17 @@ const InfrastructureIPPage = () => (
       description="Production-grade infrastructure IP blocks designed for integration into RISC-V based SoC platforms and custom silicon solutions."
     />
 
-    <div className="container py-24">
+    <div className="container py-28">
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden image-glow mb-16"
+        className="rounded-2xl overflow-hidden image-glow mb-20"
       >
-        <img src={infraImage} alt="Semiconductor architecture and circuit design" className="w-full h-64 md:h-80 object-cover" />
+        <img src={infraImage} alt="Semiconductor architecture and circuit design" className="w-full h-72 md:h-96 object-cover" />
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {ipBlocks.map((block, i) => (
           <motion.div
             key={block.name}
@@ -44,14 +44,14 @@ const InfrastructureIPPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="rounded-xl border border-border bg-card/50 p-6 card-hover-glow"
+            className="rounded-2xl border border-border bg-card p-7 card-hover-glow"
           >
-            <h3 className="text-base font-semibold mb-2">{block.name}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed mb-4">{block.description}</p>
-            <ul className="space-y-1.5">
+            <h3 className="text-lg font-semibold mb-3">{block.name}</h3>
+            <p className="text-body-sm text-muted-foreground leading-relaxed mb-5">{block.description}</p>
+            <ul className="space-y-2.5">
               {block.features.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
-                  <ChevronRight className="w-3 h-3 text-primary mt-0.5 shrink-0" />
+                <li key={f} className="flex items-start gap-2.5 text-body-sm text-muted-foreground">
+                  <ChevronRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" />
                   {f}
                 </li>
               ))}

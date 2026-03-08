@@ -13,22 +13,22 @@ const techAreas = [
 ];
 
 const HomeTechSection = () => (
-  <section className="relative py-28 overflow-hidden">
-    <div className="absolute inset-0 circuit-bg opacity-20" />
+  <section className="relative py-32 overflow-hidden">
+    <div className="absolute inset-0 circuit-bg opacity-15" />
     <div className="absolute inset-0 gradient-radial" />
 
     <div className="container relative">
-      <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+      <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-3">Technology Focus</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
+          <p className="text-body-sm font-semibold text-primary tracking-widest uppercase mb-4">Technology Focus</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             Core Technology <span className="text-gradient">Domains</span>
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-body-lg text-muted-foreground leading-relaxed">
             We operate at the intersection of semiconductor engineering, AI systems research, and robotics — building hardware platforms that bring intelligence to the edge.
           </p>
         </motion.div>
@@ -38,11 +38,11 @@ const HomeTechSection = () => (
           viewport={{ once: true }}
           className="rounded-2xl overflow-hidden image-glow"
         >
-          <img src={techImage} alt="Advanced AI semiconductor technology" className="w-full h-64 lg:h-80 object-cover" />
+          <img src={techImage} alt="Advanced AI semiconductor technology" className="w-full h-72 lg:h-96 object-cover" />
         </motion.div>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {techAreas.map((area, i) => (
           <motion.div
             key={area.title}
@@ -50,19 +50,19 @@ const HomeTechSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="group p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm card-hover-glow"
+            className="group p-7 rounded-2xl border border-border bg-card card-hover-glow"
           >
-            <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
-              <area.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+            <div className="w-12 h-12 rounded-xl bg-primary/8 border border-primary/15 flex items-center justify-center mb-5 group-hover:bg-primary/12 transition-colors">
+              <area.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
             </div>
-            <h3 className="text-sm font-semibold mb-2">{area.title}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">{area.description}</p>
+            <h3 className="text-base font-semibold mb-3">{area.title}</h3>
+            <p className="text-body-sm text-muted-foreground leading-relaxed">{area.description}</p>
           </motion.div>
         ))}
       </div>
 
-      <Link to="/technology" className="group inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 font-medium transition-colors">
-        Explore our technology <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+      <Link to="/technology" className="group inline-flex items-center gap-2.5 text-body-sm text-primary hover:text-primary/80 font-semibold transition-colors">
+        Explore our technology <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
       </Link>
     </div>
   </section>

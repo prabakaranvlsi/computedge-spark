@@ -56,7 +56,7 @@ const container = { hidden: {}, show: { transition: { staggerChildren: 0.15 } } 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 const ProductsSection = () => (
-  <section id="products" className="relative py-24 overflow-hidden">
+  <section id="products" className="relative py-28 overflow-hidden">
     <div className="absolute inset-0 gradient-radial" />
 
     <div className="container relative">
@@ -64,56 +64,56 @@ const ProductsSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-16 max-w-3xl"
+        className="mb-20 max-w-3xl"
       >
-        <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-3">Products</p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        <p className="text-body-sm font-semibold text-primary tracking-widest uppercase mb-4">Products</p>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
           Hardware Platforms for <span className="text-gradient">Edge Intelligence</span>
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-body-lg text-muted-foreground leading-relaxed">
           Purpose-built silicon and hardware platforms engineered for AI inference, autonomous systems, and semiconductor IP development.
         </p>
       </motion.div>
 
-      <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-8">
+      <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-10">
         {products.map((product) => (
           <motion.div
             key={product.title}
             id={product.slug}
             variants={fadeUp}
-            className="scroll-mt-24 rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
+            className="scroll-mt-24 rounded-2xl border border-border bg-card overflow-hidden card-hover-glow"
           >
-            <div className="grid md:grid-cols-[300px_1fr]">
-              <div className="h-48 md:h-full relative overflow-hidden">
+            <div className="grid md:grid-cols-[320px_1fr]">
+              <div className="h-56 md:h-full relative overflow-hidden">
                 <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/40 hidden md:block" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/30 hidden md:block" />
               </div>
               <div>
                 <div className="p-8 pb-0">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
+                  <div className="flex items-start gap-4 mb-5">
+                    <div className="p-3.5 rounded-xl bg-primary/8 border border-primary/15">
                       <product.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">{product.title}</h3>
-                      <p className="text-xs font-semibold text-primary tracking-wider uppercase mt-1">{product.subtitle}</p>
+                      <p className="text-body-sm font-semibold text-primary tracking-wider uppercase mt-1">{product.subtitle}</p>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">{product.description}</p>
+                  <p className="text-body text-muted-foreground leading-relaxed max-w-3xl mb-8">{product.description}</p>
                 </div>
 
-                <div className="grid sm:grid-cols-3 gap-px bg-border/50">
+                <div className="grid sm:grid-cols-3 gap-px bg-border/40">
                   {[
                     { label: "Key Features", items: product.features },
                     { label: "Target Applications", items: product.applications },
                     { label: "Benefits", items: product.benefits },
                   ].map((section) => (
-                    <div key={section.label} className="bg-card/80 p-6">
-                      <h4 className="text-xs font-semibold text-primary tracking-widest uppercase mb-4">{section.label}</h4>
-                      <ul className="space-y-2">
+                    <div key={section.label} className="bg-card p-7">
+                      <h4 className="text-body-sm font-semibold text-primary tracking-widest uppercase mb-5">{section.label}</h4>
+                      <ul className="space-y-3">
                         {section.items.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
-                            <ChevronRight className="w-3 h-3 text-primary mt-0.5 shrink-0" />
+                          <li key={item} className="flex items-start gap-2.5 text-body-sm text-muted-foreground leading-relaxed">
+                            <ChevronRight className="w-3.5 h-3.5 text-primary mt-1 shrink-0" />
                             {item}
                           </li>
                         ))}

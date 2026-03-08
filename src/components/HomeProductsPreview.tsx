@@ -14,7 +14,7 @@ const products = [
 ];
 
 const HomeProductsPreview = () => (
-  <section className="relative py-28 overflow-hidden">
+  <section className="relative py-32 overflow-hidden">
     <div className="absolute inset-0 section-glow-top" />
 
     <div className="container relative">
@@ -22,18 +22,18 @@ const HomeProductsPreview = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-14"
+        className="mb-16"
       >
-        <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-3">Products</p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        <p className="text-body-sm font-semibold text-primary tracking-widest uppercase mb-4">Products</p>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
           Hardware Platforms for <span className="text-gradient">Edge Intelligence</span>
         </h2>
-        <p className="text-muted-foreground max-w-2xl">
+        <p className="text-body-lg text-muted-foreground max-w-2xl">
           Purpose-built silicon and hardware platforms for AI inference, autonomous systems, and semiconductor development.
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 gap-6 mb-10">
+      <div className="grid sm:grid-cols-2 gap-7 mb-12">
         {products.map((product, i) => (
           <motion.div
             key={product.title}
@@ -44,9 +44,9 @@ const HomeProductsPreview = () => (
           >
             <a
               href={`/products#${product.slug}`}
-              className="group block rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
+              className="group block rounded-2xl border border-border bg-card overflow-hidden card-hover-glow"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -54,22 +54,22 @@ const HomeProductsPreview = () => (
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <div className="w-9 h-9 rounded-lg bg-primary/20 backdrop-blur-sm border border-primary/30 flex items-center justify-center">
-                    <product.icon className="w-4.5 h-4.5 text-primary" strokeWidth={1.5} />
+                  <div className="w-11 h-11 rounded-xl bg-primary/15 backdrop-blur-sm border border-primary/25 flex items-center justify-center">
+                    <product.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
                   </div>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
+              <div className="p-7">
+                <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors">{product.title}</h3>
+                <p className="text-body-sm text-muted-foreground leading-relaxed">{product.description}</p>
               </div>
             </a>
           </motion.div>
         ))}
       </div>
 
-      <Link to="/products" className="group inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 font-medium transition-colors">
-        View all products <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+      <Link to="/products" className="group inline-flex items-center gap-2.5 text-body-sm text-primary hover:text-primary/80 font-semibold transition-colors">
+        View all products <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
       </Link>
     </div>
   </section>
