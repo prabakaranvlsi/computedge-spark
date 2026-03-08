@@ -36,7 +36,7 @@ const Footer = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div>
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="ComputEdge Technologies" className="h-10" />
+            <img src={logo} alt="ComputEdge Technologies" className="h-14" />
           </Link>
           <p className="text-body-sm text-muted-foreground mt-5 leading-relaxed max-w-[240px]">
             Next-generation edge AI hardware, RISC-V processors, and custom silicon for intelligent systems.
