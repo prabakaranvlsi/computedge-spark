@@ -12,7 +12,7 @@ const partnerAreas = [
 ];
 
 const PartnershipCTA = () => (
-  <section className="relative py-36 overflow-hidden">
+  <section className="relative py-28 md:py-36 overflow-hidden section-separator">
     <div className="absolute inset-0">
       <img src={ctaBg} alt="Futuristic AI hardware technology" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/88 to-background/60" />

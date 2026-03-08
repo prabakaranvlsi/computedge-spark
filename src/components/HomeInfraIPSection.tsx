@@ -6,7 +6,7 @@ import infraImage from "@/assets/infra-ip.jpg";
 const ipBlocks = ["UART", "SPI", "I2C", "DMA", "Memory Controller", "Timer", "Interrupt Controller", "GPIO", "Clock Mgmt"];
 
 const HomeInfraIPSection = () => (
-  <section className="relative py-32 overflow-hidden">
+  <section className="relative py-28 md:py-36 overflow-hidden section-alt section-separator">
     <div className="absolute inset-0 circuit-bg-fine opacity-10" />
     <div className="absolute inset-0 gradient-radial-accent" />
 

@@ -156,6 +156,20 @@
   .section-divider {
     @apply border-t border-border/50;
   }
+
+  .section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+
+  .section-separator {
+    @apply relative;
+  }
+  .section-separator::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)) 20%, hsl(var(--border)) 80%, transparent);
+  }
 }
 
 /* Scrollbar styling */
