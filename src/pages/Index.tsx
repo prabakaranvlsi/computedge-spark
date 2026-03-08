@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import HomeMissionSection from "@/components/HomeMissionSection";
+
 import HomeTechSection from "@/components/HomeTechSection";
 import HomeProductsPreview from "@/components/HomeProductsPreview";
 import HomeInfraIPSection from "@/components/HomeInfraIPSection";
