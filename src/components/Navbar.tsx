@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -19,9 +20,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-card/95 backdrop-blur-2xl">
       <div className="container flex h-18 items-center justify-between py-4">
-        <Link to="/" className="text-xl font-bold tracking-tight font-display">
-          <span className="text-gradient">Comput</span>
-          <span className="text-foreground">Edge</span>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="ComputEdge Technologies" className="h-10" />
         </Link>
 
         <div className="hidden lg:flex items-center gap-9">
