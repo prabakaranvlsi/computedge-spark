@@ -21,7 +21,7 @@ const TechnologyPage = () => (
     <PageHeader
       label="Technology"
       title={<>Core Technology <span className="text-gradient">Domains</span></>}
-      description="ComputEdge Technologies operates at the intersection of semiconductor engineering, AI systems research, and autonomous robotics — building next-generation hardware platforms for intelligent edge computing."
+      description="ComputEdge Technologies operates at the intersection of semiconductor engineering, AI systems research, and autonomous robotics."
     />
 
     <div className="container py-24">
@@ -29,12 +29,12 @@ const TechnologyPage = () => (
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+        className="rounded-2xl overflow-hidden image-glow mb-16"
       >
         <img src={techImage} alt="Advanced semiconductor and AI technology" className="w-full h-64 md:h-80 object-cover" />
       </motion.div>
 
-      <div className="space-y-6">
+      <div className="space-y-5">
         {techAreas.map((area, i) => (
           <motion.div
             key={area.title}
@@ -42,9 +42,11 @@ const TechnologyPage = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            className="flex gap-6 p-8 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-md transition-all"
+            className="flex gap-6 p-8 rounded-xl border border-border bg-card/50 card-hover-glow"
           >
-            <area.icon className="w-8 h-8 text-primary shrink-0 mt-1" strokeWidth={1.5} />
+            <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+              <area.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
+            </div>
             <div>
               <h3 className="text-base font-semibold mb-2">{area.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>

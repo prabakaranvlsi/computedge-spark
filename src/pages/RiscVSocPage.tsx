@@ -30,7 +30,7 @@ const RiscVSocPage = () => (
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+        className="rounded-2xl overflow-hidden image-glow mb-16"
       >
         <img src={riscvImage} alt="RISC-V processor architecture visualization" className="w-full h-64 md:h-80 object-cover" />
       </motion.div>
@@ -45,7 +45,7 @@ const RiscVSocPage = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="p-6 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-md transition-all"
+              className="p-6 rounded-xl border border-border bg-card/50 card-hover-glow"
             >
               <h3 className="text-sm font-semibold mb-2">{feat.title}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{feat.description}</p>
@@ -58,7 +58,7 @@ const RiscVSocPage = () => (
         <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-6">Target Applications</p>
         <div className="flex flex-wrap gap-3">
           {targetApps.map((app) => (
-            <span key={app} className="px-5 py-3 rounded-xl border border-border bg-card text-sm font-medium text-foreground/80">
+            <span key={app} className="px-5 py-3 rounded-xl border border-border bg-card/50 text-sm font-medium text-foreground/80">
               {app}
             </span>
           ))}
