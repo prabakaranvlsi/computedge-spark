@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, ExternalLink } from "lucide-react";
+import { FileText } from "lucide-react";
 
 const papers = [
   {
@@ -25,25 +25,24 @@ const papers = [
 ];
 
 const ResearchSection = () => (
-  <section id="research" className="py-24 relative">
-    <div className="absolute inset-0 grid-bg opacity-10" />
+  <section id="research" className="py-28 relative">
     <div className="container relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-16"
+        className="mb-20"
       >
-        <p className="font-display text-sm text-primary tracking-widest uppercase mb-2">Research</p>
-        <h2 className="text-3xl sm:text-4xl font-display font-bold">
+        <p className="text-body-sm font-semibold text-primary tracking-widest uppercase mb-4">Research</p>
+        <h2 className="text-3xl sm:text-4xl font-bold">
           Advancing the <span className="text-gradient">State of the Art</span>
         </h2>
-        <p className="text-muted-foreground mt-4 max-w-xl">
+        <p className="text-body-lg text-muted-foreground mt-5 max-w-xl">
           Our research team publishes at top-tier venues and translates breakthroughs directly into shipping products.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-7">
         {papers.map((paper, i) => (
           <motion.div
             key={paper.title}
@@ -51,16 +50,16 @@ const ResearchSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="group border border-border rounded-lg p-6 bg-card hover:border-primary/30 transition-all"
+            className="group border border-border rounded-2xl p-8 bg-card card-hover-glow"
           >
-            <div className="flex items-start gap-4">
-              <FileText className="w-5 h-5 text-primary mt-1 shrink-0" />
+            <div className="flex items-start gap-5">
+              <FileText className="w-6 h-6 text-primary mt-1 shrink-0" />
               <div>
-                <span className="text-xs font-display text-primary mb-1 block">{paper.venue}</span>
-                <h3 className="font-display text-sm font-semibold mb-2 group-hover:text-primary transition-colors">
+                <span className="text-body-sm font-semibold text-primary mb-2 block">{paper.venue}</span>
+                <h3 className="text-base font-semibold mb-3 group-hover:text-primary transition-colors">
                   {paper.title}
                 </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{paper.abstract}</p>
+                <p className="text-body-sm text-muted-foreground leading-relaxed">{paper.abstract}</p>
               </div>
             </div>
           </motion.div>
