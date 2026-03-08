@@ -3,6 +3,7 @@ import { Target, Eye, Landmark, Lightbulb, Cpu, Bot, Layers, Server, CircuitBoar
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageLayout, PageHeader } from "@/components/PageLayout";
+import aboutImage from "@/assets/about.jpg";
 
 const focusAreas = [
   { icon: Cpu, label: "Edge AI Hardware" },
@@ -14,26 +15,10 @@ const focusAreas = [
 ];
 
 const pillars = [
-  {
-    icon: Target,
-    title: "Our Mission",
-    text: "To engineer the most power-efficient, high-performance AI silicon for edge deployment — enabling intelligent decision-making at the point of data generation, without reliance on cloud infrastructure.",
-  },
-  {
-    icon: Eye,
-    title: "Our Vision",
-    text: "A world where every embedded device, autonomous machine, and industrial system runs sophisticated AI workloads locally — with deterministic latency, minimal power draw, and uncompromising security.",
-  },
-  {
-    icon: Landmark,
-    title: "Company Story",
-    text: "ComputEdge Technologies was founded by semiconductor veterans and AI systems architects who recognized a critical gap: the AI revolution was accelerating, but the hardware at the edge was falling behind.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Founder's Vision",
-    text: "Our founder's conviction is rooted in a simple but powerful thesis: the future of AI is not in the data center — it's at the edge. By combining custom accelerator micro-architectures with RISC-V processor cores, ComputEdge is pioneering a new class of AI SoCs.",
-  },
+  { icon: Target, title: "Our Mission", text: "To engineer the most power-efficient, high-performance AI silicon for edge deployment — enabling intelligent decision-making at the point of data generation, without reliance on cloud infrastructure." },
+  { icon: Eye, title: "Our Vision", text: "A world where every embedded device, autonomous machine, and industrial system runs sophisticated AI workloads locally — with deterministic latency, minimal power draw, and uncompromising security." },
+  { icon: Landmark, title: "Company Story", text: "ComputEdge Technologies was founded by semiconductor veterans and AI systems architects who recognized a critical gap: the AI revolution was accelerating, but the hardware at the edge was falling behind." },
+  { icon: Lightbulb, title: "Founder's Vision", text: "Our founder's conviction is rooted in a simple but powerful thesis: the future of AI is not in the data center — it's at the edge. By combining custom accelerator micro-architectures with RISC-V processor cores, ComputEdge is pioneering a new class of AI SoCs." },
 ];
 
 const AboutPage = () => (
@@ -46,6 +31,16 @@ const AboutPage = () => (
     />
 
     <div className="container py-24">
+      {/* Hero image */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.97 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="rounded-2xl overflow-hidden shadow-xl mb-20"
+      >
+        <img src={aboutImage} alt="Semiconductor innovation and AI chip technology" className="w-full h-64 md:h-80 object-cover" />
+      </motion.div>
+
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
         <p className="text-xs font-semibold text-muted-foreground tracking-widest uppercase mb-6">Core Focus Areas</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">

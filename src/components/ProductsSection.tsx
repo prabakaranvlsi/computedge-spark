@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import { Cpu, Microchip, Bot, Layers, ChevronRight } from "lucide-react";
+import productSoc from "@/assets/product-soc.jpg";
+import productAi from "@/assets/product-ai-engine.jpg";
+import productRobotics from "@/assets/product-robotics.jpg";
+import productFpga from "@/assets/product-fpga.jpg";
 
 const products = [
   {
     icon: Cpu,
+    image: productSoc,
     title: "Edge AI SoC Platform",
     subtitle: "RISC-V Based System on Chip",
     description: "A custom RISC-V based System on Chip optimized for edge AI workloads and embedded systems. Designed for power-constrained deployment environments requiring deterministic, real-time neural network inference with minimal latency overhead.",
@@ -20,6 +25,7 @@ const products = [
   },
   {
     icon: Microchip,
+    image: productAi,
     title: "AI Acceleration Engine",
     subtitle: "Custom ML Accelerator Architecture",
     description: "A purpose-built machine learning accelerator architecture engineered for high-throughput neural network inference at the edge. Optimized for convolutional, transformer, and recurrent architectures with minimal silicon area and power budget.",
@@ -36,6 +42,7 @@ const products = [
   },
   {
     icon: Bot,
+    image: productRobotics,
     title: "Robotics Controller Platform",
     subtitle: "Autonomous Systems Control Unit",
     description: "An integrated robotics control platform purpose-built for autonomous systems, drones, and industrial robotic applications. Combines real-time motor control, sensor fusion, and AI-based perception in a single cohesive hardware platform.",
@@ -52,6 +59,7 @@ const products = [
   },
   {
     icon: Layers,
+    image: productFpga,
     title: "FPGA AI Acceleration Platform",
     subtitle: "Reconfigurable AI Prototyping System",
     description: "An FPGA-based platform for rapid prototyping, validation, and deployment of AI accelerator architectures and edge AI applications. Enables hardware-software co-design workflows and pre-silicon verification of custom AI IP blocks.",
@@ -103,37 +111,44 @@ const ProductsSection = () => (
             variants={fadeUp}
             className="rounded-xl border border-border bg-card overflow-hidden hover:shadow-lg transition-all duration-300"
           >
-            <div className="p-8 pb-0">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-lg border border-border bg-muted/50">
-                  <product.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+            <div className="grid md:grid-cols-[320px_1fr]">
+              <div className="h-48 md:h-full">
+                <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <div className="p-8 pb-0">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="p-3 rounded-lg border border-border bg-muted/50">
+                      <product.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">{product.title}</h3>
+                      <p className="text-xs font-semibold text-primary tracking-wider uppercase mt-1">{product.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">{product.description}</p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold">{product.title}</h3>
-                  <p className="text-xs font-semibold text-primary tracking-wider uppercase mt-1">{product.subtitle}</p>
+
+                <div className="grid sm:grid-cols-3 gap-px bg-border">
+                  {[
+                    { label: "Key Features", items: product.features },
+                    { label: "Target Applications", items: product.applications },
+                    { label: "Benefits", items: product.benefits },
+                  ].map((section) => (
+                    <div key={section.label} className="bg-card p-6">
+                      <h4 className="text-xs font-semibold text-primary tracking-widest uppercase mb-4">{section.label}</h4>
+                      <ul className="space-y-2">
+                        {section.items.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
+                            <ChevronRight className="w-3 h-3 text-primary mt-0.5 shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">{product.description}</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-px bg-border">
-              {[
-                { label: "Key Features", items: product.features },
-                { label: "Target Applications", items: product.applications },
-                { label: "Benefits", items: product.benefits },
-              ].map((section) => (
-                <div key={section.label} className="bg-card p-6">
-                  <h4 className="text-xs font-semibold text-primary tracking-widest uppercase mb-4">{section.label}</h4>
-                  <ul className="space-y-2">
-                    {section.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
-                        <ChevronRight className="w-3 h-3 text-primary mt-0.5 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
             </div>
           </motion.div>
         ))}

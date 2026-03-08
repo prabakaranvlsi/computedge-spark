@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageLayout, PageHeader } from "@/components/PageLayout";
+import infraImage from "@/assets/infra-ip.jpg";
 
 const ipBlocks = [
   { name: "UART Controller", description: "Universal asynchronous receiver-transmitter for serial communication interfaces.", features: ["Configurable baud rate generator", "TX/RX FIFO buffers", "Interrupt-driven and polled modes", "RS-232/RS-485 compatible"] },
@@ -26,6 +27,15 @@ const InfrastructureIPPage = () => (
     />
 
     <div className="container py-24">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.97 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+      >
+        <img src={infraImage} alt="Semiconductor architecture and circuit design" className="w-full h-64 md:h-80 object-cover" />
+      </motion.div>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {ipBlocks.map((block, i) => (
           <motion.div

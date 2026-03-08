@@ -3,6 +3,7 @@ import { Cpu, CircuitBoard, Microchip, Bot, Layers, BatteryCharging, Zap } from 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageLayout, PageHeader } from "@/components/PageLayout";
+import techImage from "@/assets/tech-focus.jpg";
 
 const techAreas = [
   { icon: Cpu, title: "Edge AI Hardware Acceleration", description: "Purpose-built compute architectures optimized for real-time neural network inference at the network edge." },
@@ -24,6 +25,15 @@ const TechnologyPage = () => (
     />
 
     <div className="container py-24">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.97 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="rounded-2xl overflow-hidden shadow-xl mb-16"
+      >
+        <img src={techImage} alt="Advanced semiconductor and AI technology" className="w-full h-64 md:h-80 object-cover" />
+      </motion.div>
+
       <div className="space-y-6">
         {techAreas.map((area, i) => (
           <motion.div
