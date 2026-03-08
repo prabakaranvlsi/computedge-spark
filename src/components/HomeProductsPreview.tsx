@@ -14,7 +14,7 @@ const products = [
 ];
 
 const HomeProductsPreview = () => (
-  <section className="relative py-32 overflow-hidden">
+  <section className="relative py-28 md:py-36 overflow-hidden section-separator">
     <div className="absolute inset-0 section-glow-top" />
 
     <div className="container relative">

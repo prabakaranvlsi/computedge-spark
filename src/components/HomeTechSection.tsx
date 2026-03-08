@@ -13,7 +13,7 @@ const techAreas = [
 ];
 
 const HomeTechSection = () => (
-  <section className="relative py-32 overflow-hidden">
+  <section className="relative py-28 md:py-36 overflow-hidden section-alt section-separator">
     <div className="absolute inset-0 circuit-bg opacity-15" />
     <div className="absolute inset-0 gradient-radial" />
 

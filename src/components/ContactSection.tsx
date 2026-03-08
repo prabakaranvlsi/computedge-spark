@@ -6,7 +6,7 @@ const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative py-28 md:py-36 overflow-hidden section-alt section-separator">
       <div className="absolute inset-0 circuit-bg-fine opacity-8" />
 
       <div className="container relative">

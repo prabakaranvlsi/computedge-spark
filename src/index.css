@@ -40,6 +40,8 @@
     --glow-strong: 0 0 80px hsl(217 91% 50% / 0.1);
     --glow-accent: 0 0 60px hsl(250 55% 58% / 0.06);
 
+    --section-alt: 213 27% 96%;
+
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 220 12% 45%;
     --sidebar-primary: 217 91% 50%;
@@ -153,6 +155,20 @@
 
   .section-divider {
     @apply border-t border-border/50;
+  }
+
+  .section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+
+  .section-separator {
+    @apply relative;
+  }
+  .section-separator::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)) 20%, hsl(var(--border)) 80%, transparent);
   }
 }
 
