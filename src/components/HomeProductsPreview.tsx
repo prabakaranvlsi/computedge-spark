@@ -63,7 +63,7 @@ const HomeProductsPreview = () => (
                 <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
               </div>
-            </Link>
+            </a>
           </motion.div>
         ))}
       </div>
