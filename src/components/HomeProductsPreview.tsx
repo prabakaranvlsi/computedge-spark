@@ -42,8 +42,8 @@ const HomeProductsPreview = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
           >
-            <Link
-              to={`/products#${product.slug}`}
+            <a
+              href={`/products#${product.slug}`}
               className="group block rounded-xl border border-border bg-card/50 overflow-hidden card-hover-glow"
             >
               <div className="relative h-48 overflow-hidden">
@@ -63,7 +63,7 @@ const HomeProductsPreview = () => (
                 <h3 className="text-sm font-semibold mb-2 group-hover:text-primary transition-colors">{product.title}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
               </div>
-            </Link>
+            </a>
           </motion.div>
         ))}
       </div>
