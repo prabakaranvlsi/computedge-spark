@@ -42,6 +42,7 @@ const products = [
   {
     icon: Layers,
     image: productFpga,
+    slug: "fpga-ai-acceleration-platform",
     title: "FPGA AI Acceleration Platform",
     subtitle: "Reconfigurable AI Prototyping System",
     description: "An FPGA-based platform for rapid prototyping, validation, and deployment of AI accelerator architectures.",
