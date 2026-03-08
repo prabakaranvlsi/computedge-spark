@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const HomeServicesPreview = () => (
-  <section className="py-24">
+  <section className="py-24 bg-muted/30">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -12,14 +12,14 @@ const HomeServicesPreview = () => (
         className="grid lg:grid-cols-2 gap-12 items-center"
       >
         <div>
-          <p className="font-display text-sm text-primary tracking-widest uppercase mb-2">Engineering Services</p>
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+          <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-2">Engineering Services</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             End-to-End <span className="text-gradient">Silicon Engineering</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             From custom SoC architecture and RISC-V integration to FPGA prototyping and robotics system development — we offer comprehensive semiconductor engineering services.
           </p>
-          <Link to="/services" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-display">
+          <Link to="/services" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium">
             View all services <ArrowRight size={14} />
           </Link>
         </div>
@@ -33,8 +33,8 @@ const HomeServicesPreview = () => (
             "Robotics Development",
             "Semiconductor IP",
           ].map((svc) => (
-            <div key={svc} className="p-4 rounded-lg border border-border bg-card text-center">
-              <p className="font-display text-xs font-medium text-secondary-foreground">{svc}</p>
+            <div key={svc} className="p-4 rounded-xl border border-border bg-background text-center hover:border-primary/30 hover:shadow-sm transition-all">
+              <p className="text-xs font-medium text-foreground/80">{svc}</p>
             </div>
           ))}
         </div>

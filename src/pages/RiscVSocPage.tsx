@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageLayout, PageHeader } from "@/components/PageLayout";
@@ -14,13 +13,7 @@ const archFeatures = [
   { title: "Low-Power Design Architecture", description: "Dynamic voltage/frequency scaling, clock gating, and power domain isolation." },
 ];
 
-const targetApps = [
-  "Edge AI devices",
-  "Robotics systems",
-  "Smart cameras",
-  "Industrial automation",
-  "IoT edge gateways",
-];
+const targetApps = ["Edge AI devices", "Robotics systems", "Smart cameras", "Industrial automation", "IoT edge gateways"];
 
 const RiscVSocPage = () => (
   <PageLayout>
@@ -28,13 +21,12 @@ const RiscVSocPage = () => (
     <PageHeader
       label="RISC-V SoC Platform"
       title={<>RISC-V Based SoC for <span className="text-gradient">Edge AI Computing</span></>}
-      description="A custom RISC-V based System-on-Chip architecture designed for edge AI and embedded computing — combining a programmable processor core with dedicated AI acceleration, low-power design, and comprehensive peripheral integration."
+      description="A custom RISC-V based System-on-Chip architecture designed for edge AI and embedded computing."
     />
 
-    <div className="container pb-24">
-      {/* Architecture Features */}
+    <div className="container py-24">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-20">
-        <p className="font-display text-xs text-primary tracking-widest uppercase mb-6">Architecture Features</p>
+        <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-6">Architecture Features</p>
         <div className="grid md:grid-cols-2 gap-5">
           {archFeatures.map((feat, i) => (
             <motion.div
@@ -43,21 +35,20 @@ const RiscVSocPage = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="p-6 rounded-lg border border-border bg-card hover:border-primary/30 transition-all"
+              className="p-6 rounded-xl border border-border bg-card hover:border-primary/30 hover:shadow-md transition-all"
             >
-              <h3 className="font-display text-sm font-semibold mb-2">{feat.title}</h3>
+              <h3 className="text-sm font-semibold mb-2">{feat.title}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{feat.description}</p>
             </motion.div>
           ))}
         </div>
       </motion.div>
 
-      {/* Target Applications */}
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-        <p className="font-display text-xs text-primary tracking-widest uppercase mb-6">Target Applications</p>
+        <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-6">Target Applications</p>
         <div className="flex flex-wrap gap-3">
           {targetApps.map((app) => (
-            <span key={app} className="px-5 py-3 rounded-lg border border-border bg-card text-sm font-display text-secondary-foreground">
+            <span key={app} className="px-5 py-3 rounded-xl border border-border bg-card text-sm font-medium text-foreground/80">
               {app}
             </span>
           ))}

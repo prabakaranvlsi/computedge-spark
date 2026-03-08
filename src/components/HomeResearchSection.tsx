@@ -11,17 +11,16 @@ const areas = [
 ];
 
 const HomeResearchSection = () => (
-  <section className="py-24 relative">
-    <div className="absolute inset-0 grid-bg opacity-10" />
-    <div className="container relative">
+  <section className="py-24">
+    <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="max-w-3xl"
       >
-        <p className="font-display text-sm text-primary tracking-widest uppercase mb-2">Research & Innovation</p>
-        <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-2">Research & Innovation</p>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           Pushing the <span className="text-gradient">Boundaries</span>
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-6">
@@ -29,13 +28,13 @@ const HomeResearchSection = () => (
         </p>
         <ul className="space-y-3 mb-8">
           {areas.map((area) => (
-            <li key={area} className="flex items-center gap-3 text-sm text-secondary-foreground">
+            <li key={area} className="flex items-center gap-3 text-sm text-foreground/80">
               <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
               {area}
             </li>
           ))}
         </ul>
-        <Link to="/research" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-display">
+        <Link to="/research" className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium">
           Learn about our research <ArrowRight size={14} />
         </Link>
       </motion.div>

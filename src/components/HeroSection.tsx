@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-chip.jpg";
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+  <section className="relative min-h-[85vh] flex items-center pt-16 overflow-hidden">
     <div className="absolute inset-0">
-      <img src={heroImage} alt="AI computing chip with glowing circuits" className="w-full h-full object-cover opacity-25" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+      <img src={heroImage} alt="AI computing chip with glowing circuits" className="w-full h-full object-cover opacity-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/90 to-background" />
     </div>
-    <div className="absolute inset-0 grid-bg opacity-20" />
 
     <div className="container relative z-10">
       <motion.div
@@ -18,10 +17,10 @@ const HeroSection = () => (
         transition={{ duration: 0.8 }}
         className="max-w-3xl"
       >
-        <p className="font-display text-sm text-primary tracking-widest uppercase mb-4">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">
           Next-Generation Edge AI Hardware
         </p>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-foreground">
           Building the Silicon That Powers{" "}
           <span className="text-gradient">Edge Intelligence</span>
         </h1>
@@ -31,13 +30,13 @@ const HeroSection = () => (
         <div className="flex flex-wrap gap-4">
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-display text-sm font-semibold hover:brightness-110 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-all shadow-md"
           >
             Explore Products <ArrowRight size={16} />
           </Link>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border text-foreground font-display text-sm font-semibold hover:border-primary/50 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground text-sm font-semibold hover:border-primary/50 hover:bg-muted transition-all"
           >
             Partner With Us
           </Link>

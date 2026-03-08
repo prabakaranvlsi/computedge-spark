@@ -18,9 +18,9 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="font-display text-lg font-bold tracking-tight">
+        <Link to="/" className="text-xl font-extrabold tracking-tight">
           <span className="text-gradient">Comput</span>
           <span className="text-foreground">Edge</span>
         </Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
               className={`text-sm font-medium transition-colors ${
                 location.pathname === link.href
                   ? "text-primary"
-                  : "text-muted-foreground hover:text-primary"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
@@ -52,7 +52,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-border bg-background/95 backdrop-blur-xl"
+            className="lg:hidden border-t border-border bg-background/98 backdrop-blur-xl"
           >
             <div className="container py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -62,7 +62,7 @@ const Navbar = () => {
                   className={`text-sm transition-colors ${
                     location.pathname === link.href
                       ? "text-primary"
-                      : "text-muted-foreground hover:text-primary"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                   onClick={() => setOpen(false)}
                 >

@@ -30,11 +30,11 @@ const footerLinks = [
 ];
 
 const Footer = () => (
-  <footer className="border-t border-border py-16">
+  <footer className="border-t border-border bg-muted/50 py-16">
     <div className="container">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div>
-          <Link to="/" className="font-display text-lg font-bold tracking-tight">
+          <Link to="/" className="text-lg font-extrabold tracking-tight">
             <span className="text-gradient">Comput</span>
             <span className="text-foreground">Edge</span>
           </Link>
@@ -45,7 +45,7 @@ const Footer = () => (
 
         {footerLinks.map((group) => (
           <div key={group.title}>
-            <p className="font-display text-xs tracking-widest uppercase text-foreground mb-4">{group.title}</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">{group.title}</p>
             <ul className="space-y-2">
               {group.links.map((link) => (
                 <li key={link.label}>
