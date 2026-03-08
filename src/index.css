@@ -96,15 +96,15 @@
 
   .circuit-bg {
     background-image:
-      linear-gradient(hsl(220 15% 16% / 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(220 15% 16% / 0.5) 1px, transparent 1px);
+      linear-gradient(hsl(222 15% 22% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(222 15% 22% / 0.5) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
   .circuit-bg-fine {
     background-image:
-      linear-gradient(hsl(220 15% 16% / 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(220 15% 16% / 0.4) 1px, transparent 1px);
+      linear-gradient(hsl(222 15% 22% / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(222 15% 22% / 0.4) 1px, transparent 1px);
     background-size: 30px 30px;
   }
 
