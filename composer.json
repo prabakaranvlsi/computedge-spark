@@ -1,5 +1,13 @@
 {
-    "require": {
-        "monolog/monolog": "^3.0"
+  "name": "computedge/website",
+  "description": "ComputEdge Technologies official website",
+  "type": "project",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "ComputEdge Technologies",
+      "email": "info@computedge.in"
     }
+  ],
+  "require": {}
 }
